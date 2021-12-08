@@ -1,0 +1,79 @@
+<?php include 'sendemail.php'; ?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/m2.gif" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Form</title>
+    <link rel="stylesheet" href="/css/mail.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  </head>
+  <body>
+    <header>
+
+      <div id="menu-bar" class="fas fa-bars"></div>
+  
+      <a href="#" class="logo"><span>D</span>omi</a>
+  
+      <nav class="navbar">
+          <a href="/hoandomi.site/index.html">TRANG CHỦ</a>
+          <a href="./hoandomi.site/book.html">Book</a>
+          <a href="./hoandomi.site/index.html">Danh Mục</a>
+          <a href="#services">services</a>
+          <a href="#gallery">gallery</a>
+          <a href="#review">review</a>
+          <a href="#">Phản Hồi</a>
+      </nav>
+  
+      <div class="icons">
+          <i class="fas fa-search" id="search-btn"></i>
+      </div>
+  
+      <form action="" class="search-bar-container">
+          <input type="search" id="search-bar" placeholder="search here...">
+          <label for="search-bar" class="fas fa-search"></label>
+      </form>
+  
+  </header>
+</div>
+
+
+    <!--alert messages start-->
+    <?php echo $alert; ?>
+    <!--alert messages end-->
+
+    <!--contact section start-->
+    <div class="contact-section">
+      <div class="contact-info">
+        <div><i class="fas fa-map-marker-alt"></i>HA NOI</div>
+        <div><i class="fas fa-envelope"></i>duyhoan.5520@email.com</div>
+        <div><i class="fas fa-phone"></i>0969693428</div>
+        <div><i class="fas fa-clock"></i>
+          <p id="clock"></p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h2>mọi phản hồi</h2>
+        <form class="contact" action="" method="post">
+          <input type="text" name="name" class="text-box" placeholder="Your Name" required>
+          <input type="email" name="email" class="text-box" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <input type="submit" name="submit" class="send-btn" value="Send">
+        </form>
+      </div>
+    </div>
+    <!--contact section end-->
+
+    <script type="text/javascript">
+    if(window.history.replaceState){
+      window.history.replaceState(null, null, window.location.href);
+    }
+    </script>
+    <script src="./js/time.js"></script>
+    <script src="./js/script.js"></script>
+
+  </body>
+</html>
